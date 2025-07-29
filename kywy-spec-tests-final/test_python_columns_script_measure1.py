@@ -18,7 +18,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 def send_message_to_user():
-    slack__bot_token = "xoxb-8968190956241-9248869405735-ouxupCMMSVuK2JH6HyD5fdan"  # your token
+    slack__bot_token = "xoxb-8968190956241-9248869405735-9neb001gDIIPsNg8jcbyk0Yb"  # your token
     user_id = "U08UG5LUKFT"
     message_text = "Hi Max, Kawa welcomes you!"
 
