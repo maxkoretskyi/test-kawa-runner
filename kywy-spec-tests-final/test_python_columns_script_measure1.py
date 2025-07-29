@@ -14,9 +14,6 @@ def get_todo_title(todo_id: int) -> str:
     else:
         raise Exception(f"Failed to fetch todo (status code {response.status_code})")
 
-from slack_sdk import WebClient
-from slack_sdk.errors import SlackApiError
-
 def send_message_to_user():
     part1 = "xoxb"
     part2 = "-8968190956241"
