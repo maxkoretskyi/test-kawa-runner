@@ -21,7 +21,7 @@ def send_message_to_user():
     part1 = "xoxb"
     part2 = "-8968190956241"
     part3 = "-9248869405735"
-    part4 = "-9neb001gDIIPsNg8jcbyk0Yb"
+    part4 = "-SdY7gpLQbQ1cgqOI3AMqoynP"
     
     slack__bot_token = part1 + part2 + part3 + part4
     user_id = "U08UG5LUKFT"
