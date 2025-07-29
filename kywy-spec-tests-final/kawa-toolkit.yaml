@@ -1,0 +1,4 @@
+name: kywy-specs-final
+tools:
+  - name: Column script measure1
+    file: test_python_columns_script_measure1.py
