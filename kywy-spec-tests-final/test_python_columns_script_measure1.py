@@ -46,7 +46,7 @@ def execute_new_decorator(df: pd.DataFrame):
     print(df)
     send_message_to_user()
     title = get_todo_title(1)
-    df['message'] = title
+    df['message'] = "hardcore"
     print('[2]: Data after script operation')
     print(df)
     return df
