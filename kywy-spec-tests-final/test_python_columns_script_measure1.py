@@ -116,13 +116,7 @@ def send_teams_message(
         print("✅ Message sent successfully!")
 
 
-def send_message_to_user():
-    part1 = "xoxb"
-    part2 = "-8968190956241"
-    part3 = "-9248869405735"
-    part4 = "-SdY7gpLQbQ1cgqOI3AMqoynP"
-    
-    slack__bot_token = part1 + part2 + part3 + part4
+def send_message_to_user(slack__bot_token):
     user_id = "U08UG5LUKFT"
     message_text = "Hi Max, Kawa welcomes you!"
 
@@ -143,13 +137,13 @@ def send_message_to_user():
         print(f"❌ Slack API error: {e.response['error']}")
 
 
-@kawa_tool(inputs={'measure1': float}, outputs={'message': str})
-def execute_new_decorator(df: pd.DataFrame):
+@kawa_tool(inputs={'measure1': float}, outputs={'message': str}, secrets={'token': 'slack__bot_token'})
+def execute_new_decorator(df: pd.DataFrame, token):
     print('run: simple_join_script')
     print('[1]: Data from KAWA')
     print(df)
-    send_message_to_user()
-    send_teams_message("📣 Hello from Kawa!")
+    send_message_to_user(token)
+    # send_teams_message("📣 Hello from Kawa!")
     title = get_todo_title(1)
     df['message'] = "hardcore"
     print('[2]: Data after script operation')
